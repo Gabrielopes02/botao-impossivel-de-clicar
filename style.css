@@ -1,0 +1,57 @@
+body{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+.conteiner{
+background-color: aqua;
+width: 100vw;
+height: 100vh;
+
+}
+#clicar{
+background-color: black;
+position:fixed;
+width: 170px;
+height: 100px;
+left: 100px;
+top: 100px;
+border-radius: 20px 0 20px 0;
+color: white;
+display: flex;
+align-items: center;
+justify-content: center;
+transition: all 1s;
+animation-name: bordarotatoria;
+animation-iteration-count:  infinite;
+animation-duration: 1s;
+overflow: hidden;
+}
+
+
+
+#clicar::before{
+content: "";
+position: absolute;
+width: 50px;
+height: 200%;
+background-color: yellowgreen;
+animation: animation 3s linear infinite;
+}
+
+#clicar::after{
+content:"" ;
+position: absolute;
+background-color: black;
+inset: 5px; 
+}
+
+@keyframes animation {
+    100%{
+    transform: rotate(360deg);
+    }
+}
+#clicar p{
+ z-index: 100;
+}
